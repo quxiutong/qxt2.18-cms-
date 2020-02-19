@@ -16,7 +16,6 @@
 <body>
 	<div class="container-fluid">
 
-
 		<div>
 			<ul class="list-unstyled">
 			 <c:forEach items="${info.list }" var="a">
@@ -41,14 +40,7 @@
 					</c:forEach>
 				
 			</ul>
-
-
-
 		</div>
-
-
-
-
 		<jsp:include page="/WEB-INF/view/common/pages.jsp" />
 
 

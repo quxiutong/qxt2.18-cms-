@@ -76,6 +76,8 @@ li {
 			</div>
 		</div>
 	</div>
+	
+	
 	<div class="container" style="margin-top: 5px">
 		<div class="row">
 			<!-- 左侧栏目 -->
@@ -94,6 +96,20 @@ li {
 				</ul>
 			</div>
 			<div class="col-md-7">
+
+				<!-- 搜索框 -->
+				<form action="/article/search" method="get">
+				   <div class="input-group mb-3">
+					<input type="text" name="key" value="${key}" class="form-control"
+						placeholder="请输入要搜索的内容"
+						aria-label="Recipient's username" aria-describedby="button-addon2">
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary" 
+							id="button-addon2">搜索</button>
+					</div>
+				</div>
+				</form>
+
 				<!--轮播图-->
 				<c:if test="${null==article.channelId }">
 					<div>
@@ -198,9 +214,10 @@ li {
 		function goPage(page) {
               var  channelId='${article.channelId}';
               var  categoryId='${article.categoryId}';
+              var key = '${key}';
               
 			location.href = "?channelId="+channelId+"&categoryId="+categoryId+"&page="
-					+ page;
+					+ page+"&key="+key;
 
 		}
 	</script>

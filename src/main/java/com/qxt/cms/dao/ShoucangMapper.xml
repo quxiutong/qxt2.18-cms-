@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qxt.cms.dao.ShoucangMapper">
+
+	<select id="selects" resultType="com.qxt.cms.domain.Shoucang">
+		select * from cms_shoucang
+	</select>
+	
+	<delete id="delshou">
+		delete from cms_shoucang where id=#{id}
+	</delete>
+	
+	<insert id="addshou">
+		insert into cms_shoucang (id) values (#{id})
+	</insert>
+	
+</mapper>

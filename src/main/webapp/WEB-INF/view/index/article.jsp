@@ -13,14 +13,23 @@
 <link href="/resource/css/bootstrap.css" rel="stylesheet">
 
 <script type="text/javascript">
-
+	function sc(id){
+		alert("收藏成功");
+		$.post("my/article/addshou",{id:id},function(flag){
+			if(flag){
+				alert("收藏成功！")
+			}else{
+				alert("收藏失败");
+			}
+		},"json")
+	}
 </script>
 </head>
 <body>
 	<div class="container">
 		<h1 align="center">${article.title }</h1>
 		<span style="float: right"><a href="/complain?id=${article.id }">投诉</a></span>
-
+		 <button type="button" class="btn btn-success" onclick="sc(${article.id})">收藏</button>
 		<h3>${a.user.username}
 			<fmt:formatDate value="${article.created }"
 				pattern="yyyy-MM-dd HH:mm:ss" />

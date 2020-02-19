@@ -6,7 +6,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 
 <!-- 别名配置 -->
  <typeAliases>
-   <package name="com.yh.domain"/>   
+   <package name="com.qxt.cms.domain"/>   
  </typeAliases>
  
  
